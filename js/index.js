@@ -75,7 +75,7 @@ const registerData = async (data) => {
 
         handleSignUpFunctionalities();
         if(apiResponse.status==201) return alert('Check your email and Verify');
-        else if(apiResponse.status==401) return alert(`User already registered`)
+        else if(apiResponse.status==401) return alert(`User already registered`,window.location.reload())
     } catch (error) {
         alert("Contact to administrator")
     }
@@ -125,9 +125,11 @@ const loginData = async (data) => {
 
         (loginEmail.value="", loginPassword.value="");
         
-        localStorage.setItem('token', dataOfResponse.Token);
+        localStorage.setItem('token', dataOfResponse.Token)
+        
+        mainContainerLogin.innerHTML = ""
 
-        if(apiResponse.status==201)      return alert('Login Successful', window.location.href="../html/chatApp.html",window.location.reload());
+        if(apiResponse.status==201)      return alert('Login Successful', window.location.href="../html/chatApp.html");
         else if(apiResponse.status==401) return alert(`User Not Found`)
         else                             return alert(`Invalid credentials`);
     } catch (error) {
