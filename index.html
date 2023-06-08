@@ -4,11 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">k
-    <title>abc</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Chat Application Login</title>
 </head>
 <body>
-    <h1>hii</h1>
+
+    <nav>
+        <div id="navBar">
+            <a href="#">Login Page</a>
+            <a href="/html/chatApp.html">Chat App</a>
+        </div>
+    </nav>
+
+    <div id="bigContainer">
+        <h2 class="nameValid">Login Form</h2>
+        <div id="status">
+            <div class="login">Login</div>
+            <div class="signup">Signup</div>
+        </div>
+
+     
+        <div id="mainContainerLogin">
+            <div id="mainContent">
+                <div class="inputs">
+                    <input type="email" class="loginEmail" placeholder="Email Address" required>
+                    <input type="password" class="loginPassword" placeholder="Password" required>
+                </div>
+        
+               <div class="forgotPassword">
+                <a href="#">Forgot password ?</a>
+               </div>
+        
+               <div class="ButtonSection">
+                <button class="loginButton">Login</button>
+               </div>
+        
+               <div class="contentLogin">
+                <label>Not a member?</label>
+                <a href="#mainContainerSignup" class="SignupText">Signup Now</a>
+               </div>
+            </div>
+         </div>
+     
+
+        <div id="mainContainerSignup" style="display: none;">
+
+            <div id="mainContent">
+                    <div class="inputs">
+                        <input type="text" class="userName" placeholder="Enter Username" required>
+                        <input type="email" class="signupEmail" placeholder="Email Address" required>
+                        <input type="password" class="signupPassword1" placeholder="Password" required>
+                        <input type="password" class="signupPassword" placeholder="Confirm Password" required>
+                    </div>
+
+                    <div class="ButtonSection">
+                        <button class="signUpButton">Signup</button>
+                    </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 <script src="./js/index.js"></script>
