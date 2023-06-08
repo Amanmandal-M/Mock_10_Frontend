@@ -130,7 +130,6 @@ const loginData = async (data) => {
         mainContainerLogin.innerHTML = ""
 
         if(apiResponse.status==201)      return alert('Login Successful', window.location.href="../html/chatApp.html");
-        else if(apiResponse.status==401) return alert(`User Not Found`,window.location.reload())
         else                             return alert(`Invalid credentials`,window.location.reload());
     } catch (error) {
         alert("Contact to administrator")
