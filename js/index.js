@@ -125,9 +125,7 @@ const loginData = async (data) => {
 
         (loginEmail.value="", loginPassword.value="");
         
-        localStorage.setItem('token', dataOfResponse.Token)
-        
-        mainContainerLogin.innerHTML = ""
+        localStorage.setItem('token', dataOfResponse.Token);
 
         if(apiResponse.status==201)      return alert('Login Successful', window.location.href="../html/chatApp.html",window.location.reload());
         else if(apiResponse.status==401) return alert(`User Not Found`)
