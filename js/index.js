@@ -74,10 +74,10 @@ const registerData = async (data) => {
         });
 
         handleSignUpFunctionalities();
-        if(apiResponse.status==201) return alert('Check your email and Verify');
+        if(apiResponse.status==201) return alert('Check your email and Verify',window.location.reload());
         else if(apiResponse.status==401) return alert(`User already registered`,window.location.reload())
     } catch (error) {
-        alert("Contact to administrator")
+        alert("Contact to administrator",window.location.reload())
     }
 };
 
@@ -130,8 +130,8 @@ const loginData = async (data) => {
         mainContainerLogin.innerHTML = ""
 
         if(apiResponse.status==201)      return alert('Login Successful', window.location.href="../html/chatApp.html");
-        else if(apiResponse.status==401) return alert(`User Not Found`)
-        else                             return alert(`Invalid credentials`);
+        else if(apiResponse.status==401) return alert(`User Not Found`,window.location.reload())
+        else                             return alert(`Invalid credentials`,window.location.reload());
     } catch (error) {
         alert("Contact to administrator")
     }
